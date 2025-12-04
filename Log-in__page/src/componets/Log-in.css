@@ -1,0 +1,110 @@
+body, html {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+      width: 100vw;
+    height: 100vh;
+}
+
+
+
+.Login_card {
+  width: clamp(280px, 40vw, 400px);
+  height: auto;
+  background: rgba(255, 255, 255, 0.2); 
+  border-radius: 21px;
+  padding: 20px;
+  box-shadow: 0 0 12px 12px rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px); 
+  position: relative;
+  z-index: 10;
+}
+
+.header-text {
+  font-size: clamp(28px, 5vw, 42px);
+  color: white;
+  font-weight: bold;
+}
+
+.inputs {
+  margin-top: clamp(20px, 3vw, 30px);
+}
+
+.inputs p {
+  font-size: clamp(14px, 1.5vw, 18px);
+  margin-bottom: 5px;
+  color: white;
+  font-weight: bold;
+}
+
+input {
+  width: 100%;
+  padding: clamp(8px, 1.5vw, 12px);
+  font-size: clamp(14px, 1.5vw, 16px);
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.login-btn {
+  width: 100%;
+  margin-top: clamp(25px, 3vw, 35px);
+  padding: clamp(10px, 1.5vw, 14px);
+  font-size: clamp(14px, 1.8vw, 18px);
+  border: none;
+  border-radius: 5px;
+  background-color: #e7e7e774; 
+  color: white;
+  cursor: pointer;
+}
+
+.login-btn:hover {
+  opacity: 0.9;
+}
+
+.layer {
+  position: fixed;      
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;        
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+
+
+.layer1 { 
+  background-image: url('/layer1.jpg'); 
+  z-index: 0; 
+  background-size: cover;
+}
+
+.layer3 { 
+  background-image: url('/layer3.png'); 
+  z-index: 2; 
+  background-size: cover; 
+  
+}
+
+
+.layer2 {
+  position: fixed;
+  top: 0;
+  left: 0;              
+  width: 100vw;         
+  height: 100vh;        
+  background: linear-gradient(170deg, rgba(167, 235, 242, 1) 0%, rgba(0, 64, 255, 1) 100%);
+  animation: moveRight 4s linear infinite, spin 3s linear infinite;
+  z-index: 1;
+}
+
+
+@keyframes moveRight {
+  0% { transform: translateX(-100%); }   
+  50% { transform: translateX(0); }      
+  100% { transform: translateX(100%); }  
+}
+
